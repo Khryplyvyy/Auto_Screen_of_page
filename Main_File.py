@@ -14,7 +14,7 @@ def test_open_main_google_page():
     driver.get(URL)
     return
 
-#(2) configurate window size and window
+#(2) configurate window size and window position
 def test_set_window_size_position():
     driver.set_window_size(1720, 856)
     driver.set_window_position(0, 0)
