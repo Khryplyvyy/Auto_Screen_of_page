@@ -5,8 +5,8 @@ An ease automation test script to open some web pages and send any keys to a tex
 
 Used modules and libraries:
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-import time
-import pyautogui
+from selenium import webdriver;
+from selenium.webdriver.common.by import By;
+from selenium.webdriver.support.ui import WebDriverWait;
+import time;
+import pyautogui;
