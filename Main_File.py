@@ -30,6 +30,7 @@ def test_click_on_google_search_button():
     driver.execute_script("return arguments[0].scrollIntoView(true);", search_button)
     driver.execute_script("arguments[0].click();", search_button)
     return
+
 #(5) cheking text into google searchline
 def test_assert():
     value = driver.find_element(By.XPATH, '//*[@id="tsf"]/div[2]/div[1]/div[2]/div/div[2]/input')
