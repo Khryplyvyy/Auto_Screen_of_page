@@ -38,7 +38,7 @@ def test_assert():
 
 
 #(6) make a screenshot of second page
-def make_screen():
+def test_make_screen():
     myScreenshot = pyautogui.screenshot()
     myScreenshot.save(r'D:\Python_3\AQA_OOP\Auto_Screen_of_page\second_page.jpg')
     return
@@ -55,7 +55,7 @@ try:
     #5)assertion_test
     test_assert()
     #6)
-    make_screen()
+    test_make_screen()
 
 
 finally:
