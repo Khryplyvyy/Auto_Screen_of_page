@@ -8,15 +8,15 @@ driver = webdriver.Chrome()
 ###################################################################
 #........................TEST CASE 1..............................#
 ###################################################################
-#(1) open main page
+#(1) opening a main page
 def test_open_main_google_page():
     URL = 'https://www.google.com/'
     driver.get(URL)
 
 
-#(2) configurate window size and window position
+#(2) configurating window size and window position
 def test_set_window_size_position():
-    driver.set_window_size(1720, 856)
+    driver.set_window_size(1519, 754)
     driver.set_window_position(0, 0)
 
 #(3) put our text into Google search line
@@ -33,21 +33,21 @@ def test_click_on_google_search_button():
     driver.execute_script("arguments[0].click();", search_button)
 
 
-#(5) cheking text into google searchline
+#(5) checking text into the google search line on the opened new window
 def test_assert():
     value = driver.find_element(By.XPATH, '//*[@id="tsf"]/div[2]/div[1]/div[2]/div/div[2]/input')
     value_text = value.get_attribute('value')  # seek element with "Automation testing" text
     assert value_text == 'Automation testing', 'Fully matching is required'
 
 
-#(6) make a screenshot of second page
+#(6) making a screenshot
 def test_make_screen():
     myScreenshot = pyautogui.screenshot()
     myScreenshot.save(r'D:\Python_3\AQA_OOP\Auto_Screen_of_page\second_page.jpg')
 
 
 try:
-#class is added for import possibility these function in future
+#class is added for ease import these function into test suite in future
     class General:
         #1)
         test_open_main_google_page()
