@@ -47,6 +47,7 @@ def test_make_screen():
     return
 
 try:
+#class is added for import possibility these function in future
     class General:
         #1)
         test_open_main_google_page()
