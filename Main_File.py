@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 ###################################################################
 #........................TEST CASE 1..............................#
 ###################################################################
-#(1) opening a main page
+#(1) open the main page
 def test_open_main_google_page():
     URL = 'https://www.google.com/'
     driver.get(URL)
