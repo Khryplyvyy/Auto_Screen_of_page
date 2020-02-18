@@ -12,7 +12,7 @@ driver = webdriver.Chrome()
 def test_open_main_google_page():
     URL = 'https://www.google.com/'
     driver.get(URL)
-    return
+
 
 #(2) configurate window size and window position
 def test_set_window_size_position():
@@ -24,14 +24,14 @@ def test_send_keys_into_google_search_line():
     text = driver.find_element(By.XPATH,
                                '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
     text.send_keys('Automation testing')
-    return
+
 
 #(4) click on search button
 def test_click_on_google_search_button():
     search_button = driver.find_element(By.XPATH, '//*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]')
     driver.execute_script("return arguments[0].scrollIntoView(true);", search_button)
     driver.execute_script("arguments[0].click();", search_button)
-    return
+
 
 #(5) cheking text into google searchline
 def test_assert():
@@ -44,7 +44,7 @@ def test_assert():
 def test_make_screen():
     myScreenshot = pyautogui.screenshot()
     myScreenshot.save(r'D:\Python_3\AQA_OOP\Auto_Screen_of_page\second_page.jpg')
-    return
+
 
 try:
 #class is added for import possibility these function in future
