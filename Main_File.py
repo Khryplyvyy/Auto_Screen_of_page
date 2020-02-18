@@ -30,11 +30,17 @@ def test_click_on_google_search_button():
     driver.execute_script("return arguments[0].scrollIntoView(true);", search_button)
     driver.execute_script("arguments[0].click();", search_button)
     return
+#(5) cheking text into google searchline
+def test_assert():
+    value = driver.find_element(By.XPATH, '//*[@id="tsf"]/div[2]/div[1]/div[2]/div/div[2]/input')
+    value_text = value.get_attribute('value')  # seek element with "Automation testing" text
+    assert value_text == 'Automation testing', 'Fully matching is required'
 
-#(5) make a screenshot of second page
+
+#(6) make a screenshot of second page
 def make_screen():
     myScreenshot = pyautogui.screenshot()
-    myScreenshot.save(r'D:\Python_3\AQA_OOP\second_page.jpg')
+    myScreenshot.save(r'D:\Python_3\AQA_OOP\Auto_Screen_of_page\second_page.jpg')
     return
 
 try:
@@ -46,8 +52,11 @@ try:
     test_send_keys_into_google_search_line()
     #4)
     test_click_on_google_search_button()
-    #5)
+    #5)assertion_test
+    test_assert()
+    #6)
     make_screen()
+
 
 finally:
     time.sleep(5)
