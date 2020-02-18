@@ -5,7 +5,9 @@ import time
 import pyautogui
 
 driver = webdriver.Chrome()
-
+###################################################################
+#........................TEST CASE 1..............................#
+###################################################################
 #(1) open main page
 def test_open_main_google_page():
     URL = 'https://www.google.com/'
@@ -45,20 +47,22 @@ def test_make_screen():
     return
 
 try:
-    #1)
-    test_open_main_google_page()
-    #2)
-    test_set_window_size_position()
-    #3)
-    test_send_keys_into_google_search_line()
-    #4)
-    test_click_on_google_search_button()
-    #5)assertion_test
-    test_assert()
-    #6)
-    test_make_screen()
+    class General:
+        #1)
+        test_open_main_google_page()
+        #2)
+        test_set_window_size_position()
+        #3)
+        test_send_keys_into_google_search_line()
+        #4)
+        test_click_on_google_search_button()
+        #5)assertion_test
+        test_assert()
+        #6)
+        test_make_screen()
 
 
 finally:
     time.sleep(5)
     driver.quit()
+
